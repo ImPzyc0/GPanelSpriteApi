@@ -53,6 +53,7 @@ public class RectangleImageHitboxSprite extends RectangleHitboxSprite implements
         } catch (IOException e) {
             e.printStackTrace();
         }
+        assert img != null;
         Image tmp = img.getScaledInstance((int)hitboxSize.getX(), (int)hitboxSize.getY(), Image.SCALE_SMOOTH);
         BufferedImage nImg = new BufferedImage((int)hitboxSize.getX(), (int)hitboxSize.getY(), BufferedImage.TYPE_INT_ARGB);
 
