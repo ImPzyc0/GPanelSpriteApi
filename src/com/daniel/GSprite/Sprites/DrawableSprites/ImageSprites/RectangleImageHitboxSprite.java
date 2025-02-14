@@ -40,6 +40,7 @@ public class RectangleImageHitboxSprite extends RectangleHitboxSprite implements
 
     @Override
     public void draw() {
+        if(this.image == null){return;}
         panel.image(image, position.getX()-hitboxSize.getX()/2, position.getY()-hitboxSize.getY()/2);
     }
 

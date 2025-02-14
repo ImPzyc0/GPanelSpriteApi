@@ -57,7 +57,12 @@ public class RectangleHitboxSprite extends PositionSprite implements HitboxSprit
             return collides(new Vector2D(hitbox.getHitboxPosition().getX() - (hitbox.getSize().getX() / 2), hitbox.getHitboxPosition().getY() - (hitbox.getSize().getY() / 2))) ||
                     collides(new Vector2D(hitbox.getHitboxPosition().getX() - (hitbox.getSize().getX() / 2), hitbox.getHitboxPosition().getY() + (hitbox.getSize().getY() / 2))) ||
                     collides(new Vector2D(hitbox.getHitboxPosition().getX() + (hitbox.getSize().getX() / 2), hitbox.getHitboxPosition().getY() - (hitbox.getSize().getY() / 2))) ||
-                    collides(new Vector2D(hitbox.getHitboxPosition().getX() + (hitbox.getSize().getX() / 2), hitbox.getHitboxPosition().getY() + (hitbox.getSize().getY() / 2)));
+                    collides(new Vector2D(hitbox.getHitboxPosition().getX() + (hitbox.getSize().getX() / 2), hitbox.getHitboxPosition().getY() + (hitbox.getSize().getY() / 2))) ||
+
+                    hitbox.collides(new Vector2D(getHitboxPosition().getX() - (getSize().getX() / 2), getHitboxPosition().getY() - (getSize().getY() / 2))) ||
+                    hitbox.collides(new Vector2D(getHitboxPosition().getX() - (getSize().getX() / 2), getHitboxPosition().getY() + (getSize().getY() / 2))) ||
+                    hitbox.collides(new Vector2D(getHitboxPosition().getX() + (getSize().getX() / 2), getHitboxPosition().getY() - (getSize().getY() / 2))) ||
+                    hitbox.collides(new Vector2D(getHitboxPosition().getX() + (getSize().getX() / 2), getHitboxPosition().getY() + (getSize().getY() / 2)));
         }
 
         return false;
