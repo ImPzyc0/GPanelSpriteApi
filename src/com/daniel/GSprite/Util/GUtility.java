@@ -44,8 +44,8 @@ public class GUtility {
     }
 
     public void draw(){
-        for(DrawableSprite sprite : drawableSprites){
-            sprite.draw();
+        for(int i = 0; i < drawableSprites.size(); i++){
+            drawableSprites.get(i).draw();
         }
     }
 
