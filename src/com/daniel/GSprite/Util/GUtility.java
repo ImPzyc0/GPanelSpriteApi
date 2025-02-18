@@ -71,15 +71,16 @@ public class GUtility {
 
         HashMap<HitboxSprite, List<HitboxSprite>> hits = new HashMap<>();
 
-        for (HitboxSprite sprite : hitboxSprites) {
-            if (sprite.isListening()) {
+
+        for (int i = 0; i< hitboxSprites.size(); i++) {
+            if (hitboxSprites.get(i).isListening()) {
                 List<HitboxSprite> temp = new ArrayList<>();
-                for (HitboxSprite sprite2 : hitboxSprites) {
-                    if (sprite.collides(sprite2)) {
-                        temp.add(sprite2);
+                for (int j = 0; j< hitboxSprites.size(); j++) {
+                    if (hitboxSprites.get(i).collides(hitboxSprites.get(j))) {
+                        temp.add(hitboxSprites.get(j));
                     }
                 }
-                hits.put(sprite, temp);
+                hits.put(hitboxSprites.get(i), temp);
             }
         }
 

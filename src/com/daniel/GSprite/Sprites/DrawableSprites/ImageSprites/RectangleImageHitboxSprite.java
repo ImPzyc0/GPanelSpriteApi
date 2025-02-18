@@ -71,4 +71,10 @@ public class RectangleImageHitboxSprite extends RectangleHitboxSprite implements
         setSize(hitboxSize);
     }
 
+    @Override
+    public String getPath() {
+        return path;
+    }
+
+
 }

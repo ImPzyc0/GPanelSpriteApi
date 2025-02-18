@@ -14,4 +14,6 @@ public interface ImageSprite {
     Vector2D getSize();
 
     void setImage(String path);
+
+    String getPath();
 }
